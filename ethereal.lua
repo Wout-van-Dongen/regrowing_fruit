@@ -6,10 +6,10 @@ if regrowing_fruit.settings:get_bool('ethereal_lemon', false) then
         ethereal["lemontree"],
         {
             only_initial = false,
-            min_light_lvl = regrowing_fruit.settings:get("ethereal_lemon_min_light_lvl"),
-            max_light_lvl = regrowing_fruit.settings:get("ethereal_lemon_max_light_lvl"),
-            grow_chance = regrowing_fruit.settings:get("ethereal_lemon_grow_chance"),
-            grow_interval = regrowing_fruit.settings:get("ethereal_lemon_grow_interval"),
+            min_light_lvl = tonumber(regrowing_fruit.settings:get("ethereal_lemon_min_light_lvl")),
+            max_light_lvl = tonumber(regrowing_fruit.settings:get("ethereal_lemon_max_light_lvl")),
+            grow_chance = tonumber(regrowing_fruit.settings:get("ethereal_lemon_grow_chance")),
+            grow_interval = tonumber(regrowing_fruit.settings:get("ethereal_lemon_grow_interval")),
             replacement_fruit = regrowing_fruit.settings:get("ethereal_lemon_fruit_replace"),
         }
     );
@@ -26,10 +26,10 @@ if regrowing_fruit.settings:get_bool('ethereal_orange', false) then
         ethereal["orangetree"],
         {
             only_initial = false,
-            min_light_lvl = regrowing_fruit.settings:get("ethereal_orange_min_light_lvl"),
-            max_light_lvl = regrowing_fruit.settings:get("ethereal_orange_max_light_lvl"),
-            grow_chance = regrowing_fruit.settings:get("ethereal_orange_grow_chance"),
-            grow_interval = regrowing_fruit.settings:get("ethereal_orange_grow_interval"),
+            min_light_lvl = tonumber(regrowing_fruit.settings:get("ethereal_orange_min_light_lvl")),
+            max_light_lvl = tonumber(regrowing_fruit.settings:get("ethereal_orange_max_light_lvl")),
+            grow_chance = tonumber(regrowing_fruit.settings:get("ethereal_orange_grow_chance")),
+            grow_interval = tonumber(regrowing_fruit.settings:get("ethereal_orange_grow_interval")),
             replacement_fruit = regrowing_fruit.settings:get("ethereal_orange_fruit_replace"),
         }
     );
@@ -45,10 +45,10 @@ if regrowing_fruit.settings:get_bool('ethereal_banana', false) then
         ethereal["bananatree"],
         {
             only_initial = true,
-            min_light_lvl = regrowing_fruit.settings:get("ethereal_banana_min_light_lvl"),
-            max_light_lvl = regrowing_fruit.settings:get("ethereal_banana_max_light_lvl"),
-            grow_chance = regrowing_fruit.settings:get("ethereal_banana_grow_chance"),
-            grow_interval = regrowing_fruit.settings:get("ethereal_banana_grow_interval"),
+            min_light_lvl = tonumber(regrowing_fruit.settings:get("ethereal_banana_min_light_lvl")),
+            max_light_lvl = tonumber(regrowing_fruit.settings:get("ethereal_banana_max_light_lvl")),
+            grow_chance = tonumber(regrowing_fruit.settings:get("ethereal_banana_grow_chance")),
+            grow_interval = tonumber(regrowing_fruit.settings:get("ethereal_banana_grow_interval")),
             replacement_fruit = regrowing_fruit.settings:get("ethereal_banana_fruit_replace"),
         }
     );
@@ -64,10 +64,10 @@ if regrowing_fruit.settings:get_bool('ethereal_coconut', false) then
         ethereal["palmtree"],
         {
             only_initial = true,
-            min_light_lvl = regrowing_fruit.settings:get("ethereal_coconut_min_light_lvl"),
-            max_light_lvl = regrowing_fruit.settings:get("ethereal_coconut_max_light_lvl"),
-            grow_chance = regrowing_fruit.settings:get("ethereal_coconut_grow_chance"),
-            grow_interval = regrowing_fruit.settings:get("ethereal_coconut_grow_interval"),
+            min_light_lvl = tonumber(regrowing_fruit.settings:get("ethereal_coconut_min_light_lvl")),
+            max_light_lvl = tonumber(regrowing_fruit.settings:get("ethereal_coconut_max_light_lvl")),
+            grow_chance = tonumber(regrowing_fruit.settings:get("ethereal_coconut_grow_chance")),
+            grow_interval = tonumber(regrowing_fruit.settings:get("ethereal_coconut_grow_interval")),
             replacement_fruit = regrowing_fruit.settings:get("ethereal_coconut_fruit_replace"),
         }
     );
@@ -83,10 +83,10 @@ if regrowing_fruit.settings:get_bool('ethereal_olive', false) then
         ethereal["olivetree"],
         {
             only_initial = false,
-            min_light_lvl = regrowing_fruit.settings:get("ethereal_olive_min_light_lvl"),
-            max_light_lvl = regrowing_fruit.settings:get("ethereal_olive_max_light_lvl"),
-            grow_chance = regrowing_fruit.settings:get("ethereal_olive_grow_chance"),
-            grow_interval = regrowing_fruit.settings:get("ethereal_olive_grow_interval"),
+            min_light_lvl = tonumber(regrowing_fruit.settings:get("ethereal_olive_min_light_lvl")),
+            max_light_lvl = tonumber(regrowing_fruit.settings:get("ethereal_olive_max_light_lvl")),
+            grow_chance = tonumber(regrowing_fruit.settings:get("ethereal_olive_grow_chance")),
+            grow_interval = tonumber(regrowing_fruit.settings:get("ethereal_olive_grow_interval")),
             replacement_fruit = regrowing_fruit.settings:get("ethereal_olive_fruit_replace"),
         }
     );
@@ -102,10 +102,10 @@ if regrowing_fruit.settings:get_bool('ethereal_golden_apple', false) then
         ethereal["yellowtree"],
         {
             only_initial = false,
-            min_light_lvl = regrowing_fruit.settings:get("ethereal_golden_apple_min_light_lvl"),
-            max_light_lvl = regrowing_fruit.settings:get("ethereal_golden_apple_max_light_lvl"),
-            grow_chance = regrowing_fruit.settings:get("ethereal_golden_apple_grow_chance"),
-            grow_interval = regrowing_fruit.settings:get("ethereal_golden_apple_grow_interval"),
+            min_light_lvl = tonumber(regrowing_fruit.settings:get("ethereal_golden_apple_min_light_lvl")),
+            max_light_lvl = tonumber(regrowing_fruit.settings:get("ethereal_golden_apple_max_light_lvl")),
+            grow_chance = tonumber(regrowing_fruit.settings:get("ethereal_golden_apple_grow_chance")),
+            grow_interval = tonumber(regrowing_fruit.settings:get("ethereal_golden_apple_grow_interval")),
             replacement_fruit = regrowing_fruit.settings:get("ethereal_golden_apple_fruit_replace"),
         }
     );

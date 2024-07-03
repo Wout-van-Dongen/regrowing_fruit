@@ -7,10 +7,10 @@ if regrowing_fruit.settings:get_bool('default_apple', false) then
         schematic,
         {
             only_initial = false,
-            min_light_lvl = regrowing_fruit.settings:get("default_apple_min_light_lvl"),
-            max_light_lvl = regrowing_fruit.settings:get("default_apple_max_light_lvl"),
-            grow_chance = regrowing_fruit.settings:get("default_apple_grow_chance"),
-            grow_interval = regrowing_fruit.settings:get("default_apple_grow_interval"),
+            min_light_lvl = tonumber(regrowing_fruit.settings:get("default_apple_min_light_lvl")),
+            max_light_lvl = tonumber(regrowing_fruit.settings:get("default_apple_max_light_lvl")),
+            grow_chance = tonumber(regrowing_fruit.settings:get("default_apple_grow_chance")),
+            grow_interval = tonumber(regrowing_fruit.settings:get("default_apple_grow_interval")),
             replacement_fruit = regrowing_fruit.settings:get("default_apple_fruit_replace"),
         }
     )
