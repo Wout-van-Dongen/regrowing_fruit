@@ -44,7 +44,7 @@ if regrowing_fruit.settings:get_bool('ethereal_banana', false) then
         regrowing_fruit.settings:get("ethereal_banana_leaves_origin") or "ethereal:bananaleaves",
         ethereal["bananatree"],
         {
-            only_initial = false,
+            only_initial = true,
             min_light_lvl = regrowing_fruit.settings:get("ethereal_banana_min_light_lvl"),
             max_light_lvl = regrowing_fruit.settings:get("ethereal_banana_max_light_lvl"),
             grow_chance = regrowing_fruit.settings:get("ethereal_banana_grow_chance"),
@@ -63,7 +63,7 @@ if regrowing_fruit.settings:get_bool('ethereal_coconut', false) then
         regrowing_fruit.settings:get("ethereal_coconut_leaves_origin") or "ethereal:palmleaves",
         ethereal["palmtree"],
         {
-            only_initial = false,
+            only_initial = true,
             min_light_lvl = regrowing_fruit.settings:get("ethereal_coconut_min_light_lvl"),
             max_light_lvl = regrowing_fruit.settings:get("ethereal_coconut_max_light_lvl"),
             grow_chance = regrowing_fruit.settings:get("ethereal_coconut_grow_chance"),
