@@ -85,7 +85,7 @@ regrowing_fruit.alter_tree_schematic = function(fruit, leaves, trunk, schematic,
             altered_schematic.data[index] = replace_node_leaves
         elseif node.name == fruit then
             -- Place leaves only above the position of the initial fruit
-            if only_initial then
+            if options and options["only_initial"] then
                 local target_index = get_index_above(altered_schematic, index)
                 if target_index <= get_max_index(altered_schematic) then
                     altered_schematic.data[target_index] = replace_node_leaves
