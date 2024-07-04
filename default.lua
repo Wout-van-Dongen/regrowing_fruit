@@ -4,6 +4,7 @@ if regrowing_fruit.settings:get_bool('default_apple', false) then
     local altered_schematic = regrowing_fruit.alter_tree_schematic (
         regrowing_fruit.settings:get("default_apple_fruit_origin") or "default:apple",
         regrowing_fruit.settings:get("default_apple_leaves_origin") or "default:leaves",
+        regrowing_fruit.settings:get("default_apple_trunk_origin") or "default:tree",
         schematic,
         {
             only_initial = false,

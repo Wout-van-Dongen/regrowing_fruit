@@ -10,7 +10,7 @@ local get_max_index = function(schematic)
     return schematic.size.x * schematic.size.y * schematic.size.z
 end
 
-regrowing_fruit.alter_tree_schematic = function(fruit, leaves, schematic, options)
+regrowing_fruit.alter_tree_schematic = function(fruit, leaves, trunk, schematic, options)
     --[[
         Options: 
         only_initial = true|false
@@ -44,8 +44,16 @@ regrowing_fruit.alter_tree_schematic = function(fruit, leaves, schematic, option
         natural_leaves_def
     )
     
-    -- TODO: make the new leaves fall when trunk is dug
-    
+    -- Register Leaf decay
+    minetest.log("error", "Leafdecay: " .. trunk .. ", " .. replace_node_leaves.name .. ", " .. replace_node_fruit.name)
+    default.register_leafdecay(
+        {
+            trunks = { trunk },
+            leaves = { replace_node_leaves.name, replace_node_fruit.name },
+            radius = 3
+        }
+    )
+
     -- Register new ABM for fruit growing
     minetest.register_abm({
         nodenames = replace_node_leaves.name,
