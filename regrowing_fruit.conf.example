@@ -14,10 +14,10 @@ default_apple_min_light_lvl = 12
 default_apple_max_light_lvl = 15
 default_apple_grow_chance = 100
 default_apple_grow_interval = 20
-#default_apple_leaves_origin = "default:leaves"
-#default_apple_fruit_origin = "default:apple"
-#default_apple_trunk_origin = "default:tree"
-#default_apple_fruit_replace = "default:rotten_apple"
+#default_apple_leaves_origin = default:leaves
+#default_apple_fruit_origin = default:apple
+#default_apple_trunk_origin = default:tree
+#default_apple_fruit_replace = default:rotten_apple
 
 # == Mod 'ethereal' settings ===========================================
 ethereal_enabled = true
@@ -28,10 +28,10 @@ ethereal_lemon_min_light_lvl = 12
 ethereal_lemon_max_light_lvl = 15
 ethereal_lemon_grow_chance = 100
 ethereal_lemon_grow_interval = 20
-#ethereal_lemon_leaves_origin = "ethereal:lemon_leaves"
-#ethereal_lemon_fruit_origin = "ethereal:lemon"
-#ethereal_lemon_trunk_origin = "default:tree"
-#ethereal_lemon_fruit_replace = "ethereal:rotten_lemon"
+#ethereal_lemon_leaves_origin = ethereal:lemon_leaves
+#ethereal_lemon_fruit_origin = ethereal:lemon
+#ethereal_lemon_trunk_origin = default:tree
+#ethereal_lemon_fruit_replace = ethereal:rotten_lemon
 
 # Orange
 ethereal_orange = true
@@ -39,10 +39,10 @@ ethereal_orange_min_light_lvl = 12
 ethereal_orange_max_light_lvl = 15
 ethereal_orange_grow_chance = 100
 ethereal_orange_grow_interval = 20
-#ethereal_orange_leaves_origin = "ethereal:orange_leaves"
-#ethereal_orange_fruit_origin = "ethereal:orange"
-#ethereal_orange_trunk_origin = "default:tree"
-#ethereal_orange_fruit_replace = "ethereal:rotten_orange"
+#ethereal_orange_leaves_origin = ethereal:orange_leaves
+#ethereal_orange_fruit_origin = ethereal:orange
+#ethereal_orange_trunk_origin = default:tree
+#ethereal_orange_fruit_replace = ethereal:rotten_orange
 
 # Olive
 ethereal_olive = true
@@ -50,10 +50,10 @@ ethereal_olive_min_light_lvl = 12
 ethereal_olive_max_light_lvl = 15
 ethereal_olive_grow_chance = 100
 ethereal_olive_grow_interval = 20
-#ethereal_olive_leaves_origin = "ethereal:olive_leaves"
-#ethereal_olive_fruit_origin = "ethereal:olive"
-#ethereal_olive_trunk_origin = "ethereal:olive_trunk"
-#ethereal_olive_fruit_replace = "ethereal:rotten_olive"
+#ethereal_olive_leaves_origin = ethereal:olive_leaves
+#ethereal_olive_fruit_origin = ethereal:olive
+#ethereal_olive_trunk_origin = ethereal:olive_trunk
+#ethereal_olive_fruit_replace = ethereal:rotten_olive
 
 # Banana
 ethereal_banana = true
@@ -61,10 +61,10 @@ ethereal_banana_min_light_lvl = 12
 ethereal_banana_max_light_lvl = 15
 ethereal_banana_grow_chance = 100
 ethereal_banana_grow_interval = 20
-#ethereal_banana_leaves_origin = "ethereal:bananaleaves"
-#ethereal_banana_fruit_origin = "ethereal:banana"
-#ethereal_banana_trunk_origin = "ethereal:banana_trunk"
-ethereal_banana_fruit_replace = "ethereal:banana_bunch"
+#ethereal_banana_leaves_origin = ethereal:bananaleaves
+#ethereal_banana_fruit_origin = ethereal:banana
+#ethereal_banana_trunk_origin = ethereal:banana_trunk
+ethereal_banana_fruit_replace = ethereal:banana_bunch
 
 # Coconut
 ethereal_coconut = true
@@ -72,10 +72,10 @@ ethereal_coconut_min_light_lvl = 12
 ethereal_coconut_max_light_lvl = 15
 ethereal_coconut_grow_chance = 100
 ethereal_coconut_grow_interval = 20
-#ethereal_coconut_leaves_origin = "ethereal:palmleaves"
-#ethereal_coconut_fruit_origin = "ethereal:coconut"
-#ethereal_coconut_trunk_origin = "ethereal:coconut_trunk"
-#ethereal_coconut_fruit_replace = "ethereal:rotten_coconut"
+#ethereal_coconut_leaves_origin = ethereal:palmleaves
+#ethereal_coconut_fruit_origin = ethereal:coconut
+#ethereal_coconut_trunk_origin = ethereal:coconut_trunk
+#ethereal_coconut_fruit_replace = ethereal:rotten_coconut
 
 # Golden Apple
 ethereal_golden_apple = true
@@ -83,7 +83,7 @@ ethereal_golden_apple_min_light_lvl = 12
 ethereal_golden_apple_max_light_lvl = 15
 ethereal_golden_apple_grow_chance = 100
 ethereal_golden_apple_grow_interval = 20
-#ethereal_golden_apple_leaves_origin = "ethereal:yellowleaves"
-#ethereal_golden_apple_fruit_origin = "ethereal:golden_apple"
-#ethereal_golden_apple_trunk_origin = "ethereal:yellow_trunk"
-#ethereal_golden_apple_fruit_replace = "ethereal:rotten_golden_apple"
+#ethereal_golden_apple_leaves_origin = ethereal:yellowleaves
+#ethereal_golden_apple_fruit_origin = ethereal:golden_apple
+#ethereal_golden_apple_trunk_origin = ethereal:yellow_trunk
+#ethereal_golden_apple_fruit_replace = ethereal:rotten_golden_apple
