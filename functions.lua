@@ -10,6 +10,34 @@ local get_max_index = function(schematic)
     return schematic.size.x * schematic.size.y * schematic.size.z
 end
 
+regrowing_fruit.registered_leafdecays = {}
+
+regrowing_fruit.register_leafdecay = function(trunks, decayables)
+    for _, trunk in pairs(trunks) do
+        -- Set trunk as decayables key if not yet used
+        if type(regrowing_fruit.registered_leafdecays[trunk]) ~= "table" then
+            regrowing_fruit.registered_leafdecays[trunk] = {}
+        end
+        -- Add decayables to register
+        for _, decayable in pairs(decayables) do
+            table.insert(regrowing_fruit.registered_leafdecays[trunk], decayable)
+        end
+    end
+end
+
+regrowing_fruit.push_registrations = function()
+    -- Push leaf decay registrations
+    for trunk, decayables in pairs(regrowing_fruit.registered_leafdecays) do
+        default.register_leafdecay(
+            {
+                trunks = { trunk },
+                leaves = decayables,
+                radius = 3
+            }
+        )
+    end
+end
+
 regrowing_fruit.alter_tree_schematic = function(fruit, leaves, trunk, schematic, options)
     --[[
         Options: 
@@ -45,12 +73,9 @@ regrowing_fruit.alter_tree_schematic = function(fruit, leaves, trunk, schematic,
     )
     
     -- Register Leaf decay
-    default.register_leafdecay(
-        {
-            trunks = { trunk },
-            leaves = { replace_node_leaves.name, replace_node_fruit.name },
-            radius = 3
-        }
+    regrowing_fruit.register_leafdecay(
+        { trunk }, -- Trunks
+        { leaves, replace_node_leaves.name, replace_node_fruit.name } -- Decayables
     )
 
     -- Register new ABM for fruit growing

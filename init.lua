@@ -22,3 +22,6 @@ if regrowing_fruit.settings:get_bool("mod_enabled", false) then
         dofile(regrowing_fruit.path .. "/ethereal.lua")
     end
 end
+
+-- Push all registrations
+regrowing_fruit.push_registrations()
