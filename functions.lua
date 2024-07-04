@@ -45,7 +45,6 @@ regrowing_fruit.alter_tree_schematic = function(fruit, leaves, trunk, schematic,
     )
     
     -- Register Leaf decay
-    minetest.log("error", "Leafdecay: " .. trunk .. ", " .. replace_node_leaves.name .. ", " .. replace_node_fruit.name)
     default.register_leafdecay(
         {
             trunks = { trunk },
