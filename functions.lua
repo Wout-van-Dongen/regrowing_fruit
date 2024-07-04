@@ -10,6 +10,46 @@ local get_max_index = function(schematic)
     return schematic.size.x * schematic.size.y * schematic.size.z
 end
 
+regrowing_fruit.get_options = function(prefix)
+    local options_template = {
+        { name = "min_light_lvl", datatype = "number" },
+        { name = "max_light_lvl", datatype = "number" },
+        { name = "grow_chance", datatype = "number" },
+        { name = "grow_interval", datatype = "number" },
+        { name = "area_reach", datatype = "number" },
+        { name = "area_max", datatype = "number" },
+        { name = "fruit_replace", datatype = "string"}
+    }
+    
+    -- Create new options table
+    local options = {}
+    
+    -- Fetch the options to populate the new table
+    for _, option in pairs(options_template) do
+    
+        -- Compose configuration option name
+        local name = option["name"]
+        local datatype = option["datatype"]
+        local conf_name = prefix .. "_" .. name
+        minetest.log("error", "OPTIONS NAME: " .. conf_name)
+        
+        -- Assign options to new table
+        if option["datatype"] == "boolean" then
+            options[name] = regrowing_fruit.settings:get_bool(conf_name, false)
+        elseif option["datatype"] == "number" then
+            options[name] = tonumber(regrowing_fruit.settings:get(conf_name))
+        else -- We assume it's a string
+            options[name] = regrowing_fruit.settings:get(conf_name)
+        end
+    end
+    
+    minetest.log("error", "OPTIONS TABLE: " .. dump(options))
+    
+    
+    -- Return the new options table
+    return options
+end
+
 regrowing_fruit.registered_leafdecays = {}
 
 regrowing_fruit.register_leafdecay = function(trunks, decayables)
@@ -38,7 +78,7 @@ regrowing_fruit.push_registrations = function()
     end
 end
 
-regrowing_fruit.alter_tree_schematic = function(fruit, leaves, trunk, schematic, options)
+regrowing_fruit.alter_tree_schematic = function(fruit, leaves, trunk, schematic, only_initial, options)
     --[[
         Options: 
         only_initial = true|false
@@ -53,7 +93,7 @@ regrowing_fruit.alter_tree_schematic = function(fruit, leaves, trunk, schematic,
 
     -- Replacements for schema
     local replace_node_leaves = {name = leaves:gsub("[_%w]*:", regrowing_fruit.name .. ":")}
-    local replace_node_fruit = {name = options and options["replacement_fruit"] or fruit}
+    local replace_node_fruit = {name = options and options["fruit_replace"] or fruit}
     local replace_node_air = {name = "air"}
 
     -- Fetch the definition of the regular leaves
@@ -117,11 +157,11 @@ regrowing_fruit.alter_tree_schematic = function(fruit, leaves, trunk, schematic,
     -- Alter the schematic
     for index, node in pairs(altered_schematic.data) do
     -- Replace all leaves if not only the intial positions
-        if not (options and options["only_initial"]) and node.name == leaves then
+        if (not only_initial) and node.name == leaves then
             altered_schematic.data[index] = replace_node_leaves
         elseif node.name == fruit then
             -- Place leaves only above the position of the initial fruit
-            if options and options["only_initial"] then
+            if only_initial then
                 local target_index = get_index_above(altered_schematic, index)
                 if target_index <= get_max_index(altered_schematic) then
                     altered_schematic.data[target_index] = replace_node_leaves
