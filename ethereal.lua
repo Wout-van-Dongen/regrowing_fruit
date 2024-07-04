@@ -12,6 +12,8 @@ if regrowing_fruit.settings:get_bool('ethereal_lemon', false) then
             grow_chance = tonumber(regrowing_fruit.settings:get("ethereal_lemon_grow_chance")),
             grow_interval = tonumber(regrowing_fruit.settings:get("ethereal_lemon_grow_interval")),
             replacement_fruit = regrowing_fruit.settings:get("ethereal_lemon_fruit_replace"),
+            area_reach = tonumber(regrowing_fruit.settings:get("ethereal_lemon_area_reach")),
+            area_max = tonumber(regrowing_fruit.settings:get("ethereal_lemon_area_max"))
         }
     );
     
@@ -33,6 +35,8 @@ if regrowing_fruit.settings:get_bool('ethereal_orange', false) then
             grow_chance = tonumber(regrowing_fruit.settings:get("ethereal_orange_grow_chance")),
             grow_interval = tonumber(regrowing_fruit.settings:get("ethereal_orange_grow_interval")),
             replacement_fruit = regrowing_fruit.settings:get("ethereal_orange_fruit_replace"),
+            area_reach = tonumber(regrowing_fruit.settings:get("ethereal_orange_area_reach")),
+            area_max = tonumber(regrowing_fruit.settings:get("ethereal_orange_area_max"))
         }
     );
     -- overwrite placement var with new schematic
@@ -53,6 +57,8 @@ if regrowing_fruit.settings:get_bool('ethereal_banana', false) then
             grow_chance = tonumber(regrowing_fruit.settings:get("ethereal_banana_grow_chance")),
             grow_interval = tonumber(regrowing_fruit.settings:get("ethereal_banana_grow_interval")),
             replacement_fruit = regrowing_fruit.settings:get("ethereal_banana_fruit_replace"),
+            area_reach = tonumber(regrowing_fruit.settings:get("ethereal_banana_area_reach")),
+            area_max = tonumber(regrowing_fruit.settings:get("ethereal_banana_area_max"))
         }
     );
     -- overwrite placement var with new schematic
@@ -73,6 +79,8 @@ if regrowing_fruit.settings:get_bool('ethereal_coconut', false) then
             grow_chance = tonumber(regrowing_fruit.settings:get("ethereal_coconut_grow_chance")),
             grow_interval = tonumber(regrowing_fruit.settings:get("ethereal_coconut_grow_interval")),
             replacement_fruit = regrowing_fruit.settings:get("ethereal_coconut_fruit_replace"),
+            area_reach = tonumber(regrowing_fruit.settings:get("ethereal_coconut_area_reach")),
+            area_max = tonumber(regrowing_fruit.settings:get("ethereal_coconut_area_max"))
         }
     );
     -- overwrite placement var with new schematic
@@ -93,6 +101,8 @@ if regrowing_fruit.settings:get_bool('ethereal_olive', false) then
             grow_chance = tonumber(regrowing_fruit.settings:get("ethereal_olive_grow_chance")),
             grow_interval = tonumber(regrowing_fruit.settings:get("ethereal_olive_grow_interval")),
             replacement_fruit = regrowing_fruit.settings:get("ethereal_olive_fruit_replace"),
+            area_reach = tonumber(regrowing_fruit.settings:get("ethereal_olive_area_reach")),
+            area_max = tonumber(regrowing_fruit.settings:get("ethereal_olive_area_max"))
         }
     );
     -- overwrite placement var with new schematic
@@ -113,6 +123,8 @@ if regrowing_fruit.settings:get_bool('ethereal_golden_apple', false) then
             grow_chance = tonumber(regrowing_fruit.settings:get("ethereal_golden_apple_grow_chance")),
             grow_interval = tonumber(regrowing_fruit.settings:get("ethereal_golden_apple_grow_interval")),
             replacement_fruit = regrowing_fruit.settings:get("ethereal_golden_apple_fruit_replace"),
+            area_reach = tonumber(regrowing_fruit.settings:get("ethereal_golden_apple_area_reach")),
+            area_max = tonumber(regrowing_fruit.settings:get("ethereal_golden_apple_area_max"))
         }
     );
     -- overwrite placement var with new schematic

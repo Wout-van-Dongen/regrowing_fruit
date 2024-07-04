@@ -13,6 +13,8 @@ if regrowing_fruit.settings:get_bool('default_apple', false) then
             grow_chance = tonumber(regrowing_fruit.settings:get("default_apple_grow_chance")),
             grow_interval = tonumber(regrowing_fruit.settings:get("default_apple_grow_interval")),
             replacement_fruit = regrowing_fruit.settings:get("default_apple_fruit_replace"),
+            area_reach = tonumber(regrowing_fruit.settings:get("default_apple_area_reach")),
+            area_max = tonumber(regrowing_fruit.settings:get("default_apple_area_max"))
         }
     )
     -- Overwrite Schematic Placement Function

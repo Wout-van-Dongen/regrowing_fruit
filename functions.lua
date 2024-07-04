@@ -47,6 +47,8 @@ regrowing_fruit.alter_tree_schematic = function(fruit, leaves, trunk, schematic,
         grow_chance = 0-9+
         grow_interval = 0-9+
         replacement_fruit = "node_name"
+        area_reach = 0-9+
+        area_max = 0-9+
     ]]--
 
     -- Replacements for schema
@@ -91,7 +93,17 @@ regrowing_fruit.alter_tree_schematic = function(fruit, leaves, trunk, schematic,
             local current_light_level = minetest.get_node_light(target_pos)
             -- Add fruit below the leaves, if there is space and the light level is approperiate
             if minetest.get_node(target_pos).name == "air" and current_light_level ~= nil and current_light_level >= min_light_level and current_light_level <= max_light_level then
-                minetest.set_node(target_pos, replace_node_fruit)
+                local area_reach = options and options["area_reach"] or 3
+                local area_max = options and options["area_max"] or 1
+                local fruit_in_area = minetest.find_nodes_in_area(
+                    { pos.x - area_reach, pos.y - area_reach, pos.z - area_reach }, -- pos1
+                    { pos.x + area_reach, pos.y + area_reach, pos.z + area_reach }, -- pos2
+                    { replace_node_fruit.name } -- nodes
+                )
+                -- Add fruit if density is acceptable
+                if fruit_in_area and #fruit_in_area < area_max then
+                    minetest.set_node(target_pos, replace_node_fruit)
+                end
             end
         end
     })

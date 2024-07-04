@@ -18,6 +18,8 @@ default_apple_grow_interval = 20
 #default_apple_fruit_origin = default:apple
 #default_apple_trunk_origin = default:tree
 #default_apple_fruit_replace = default:rotten_apple
+default_apple_area_reach = 2
+default_apple_area_max = 3
 
 # == Mod 'ethereal' settings ===========================================
 ethereal_enabled = true
@@ -32,6 +34,8 @@ ethereal_lemon_grow_interval = 20
 #ethereal_lemon_fruit_origin = ethereal:lemon
 #ethereal_lemon_trunk_origin = default:tree
 #ethereal_lemon_fruit_replace = ethereal:rotten_lemon
+ethereal_lemon_area_reach = 2
+ethereal_lemon_area_max = 3
 
 # Orange
 ethereal_orange = true
@@ -43,6 +47,8 @@ ethereal_orange_grow_interval = 20
 #ethereal_orange_fruit_origin = ethereal:orange
 #ethereal_orange_trunk_origin = default:tree
 #ethereal_orange_fruit_replace = ethereal:rotten_orange
+ethereal_orange_area_reach = 2
+ethereal_orange_area_max = 3
 
 # Olive
 ethereal_olive = true
@@ -54,6 +60,8 @@ ethereal_olive_grow_interval = 20
 #ethereal_olive_fruit_origin = ethereal:olive
 #ethereal_olive_trunk_origin = ethereal:olive_trunk
 #ethereal_olive_fruit_replace = ethereal:rotten_olive
+ethereal_olive_area_reach = 2
+ethereal_olive_area_max = 3
 
 # Banana
 ethereal_banana = true
@@ -65,6 +73,8 @@ ethereal_banana_grow_interval = 20
 #ethereal_banana_fruit_origin = ethereal:banana
 #ethereal_banana_trunk_origin = ethereal:banana_trunk
 ethereal_banana_fruit_replace = ethereal:banana_bunch
+ethereal_banana_area_reach = 0
+ethereal_banana_area_max = 3
 
 # Coconut
 ethereal_coconut = true
@@ -76,6 +86,8 @@ ethereal_coconut_grow_interval = 20
 #ethereal_coconut_fruit_origin = ethereal:coconut
 #ethereal_coconut_trunk_origin = ethereal:coconut_trunk
 #ethereal_coconut_fruit_replace = ethereal:rotten_coconut
+ethereal_coconut_area_reach = 0
+ethereal_coconut_area_max = 3
 
 # Golden Apple
 ethereal_golden_apple = true
@@ -87,3 +99,5 @@ ethereal_golden_apple_grow_interval = 20
 #ethereal_golden_apple_fruit_origin = ethereal:golden_apple
 #ethereal_golden_apple_trunk_origin = ethereal:yellow_trunk
 #ethereal_golden_apple_fruit_replace = ethereal:rotten_golden_apple
+ethereal_golden_apple_area_reach = 2
+ethereal_golden_apple_area_max = 2
